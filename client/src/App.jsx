@@ -5,10 +5,12 @@ import Login from './pages/Login'
 import Search from './pages/Search'
 import Signup from './pages/Signup'
 import Collections from './pages/Collections'
+import Header from './components/Header'
 
 function App() {
   return (
     <BrowserRouter>
+      <Header/>
       <Routes>
         <Route path='/' element={<Home/>}/>
         <Route path='/login' element={<Login/>}/>
