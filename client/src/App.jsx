@@ -6,6 +6,7 @@ import Search from './pages/Search'
 import Signup from './pages/Signup'
 import Collections from './pages/Collections'
 import Header from './components/Header'
+import Footercom from './components/Footercom'
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path='/signup' element={<Signup/>}/>
         <Route path='/collections' element={<Collections/>}/>
       </Routes>
+      <Footercom/>
     </BrowserRouter>
   )
 }
