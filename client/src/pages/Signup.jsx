@@ -2,7 +2,8 @@ import { Alert, Button, Label, Spinner, TextInput } from 'flowbite-react';
 import React, { useState } from 'react'
 import { FaSpotify } from "react-icons/fa6";
 import { FcGoogle } from "react-icons/fc";
-import { HiInformationCircle } from "react-icons/hi";
+import { HiInformationCircle, HiOutlineMail } from "react-icons/hi";
+import { TbPasswordUser, TbUser } from 'react-icons/tb';
 import { Link, useNavigate } from 'react-router-dom';
 
 export default function Signup() {
@@ -38,7 +39,7 @@ export default function Signup() {
       }
       setLoading(false)
       if(res.ok){
-        navigate('/')
+        navigate('/login')
       }
     } catch (error) {
       setErrorMessage(error.message)
@@ -60,21 +61,24 @@ export default function Signup() {
             id='username'
             type='text'
             placeholder='username'
-            onChange={handleChange}/>
+            onChange={handleChange}
+            icon={TbUser}/>
 
           <Label value='Email Address'/>
           <TextInput
             id='email'
             type='email'
             placeholder='name@smolify.com'
-            onChange={handleChange}/>
+            onChange={handleChange}
+            icon={HiOutlineMail}/>
 
           <Label value='Password'/>
           <TextInput
             id='password'
             type='password'
             placeholder='xxxxxxxxxxxxx'
-            onChange={handleChange}/>
+            onChange={handleChange}
+            icon={TbPasswordUser}/>
             <Button 
               type='submit' gradientDuoTone="redToYellow"  
               pill
